@@ -33,6 +33,9 @@ element.classList.add("list-group-item");
 
     let element2 = element.cloneNode (true);
 
+    // listas.item (0).before(element);
+    //listas.item(0).prepend(element2);
+
     listas.item(0).append(element) //Inserta el elemento al final de la lsita
     listas.item(0).after(element) // Inserta el elemento después de la lista
 
