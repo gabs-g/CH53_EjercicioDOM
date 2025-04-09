@@ -56,7 +56,7 @@ btnMostrar.addEventListener("click", function(event){
          
 
      listas.item(1).insertAdjacentHTML("beforeend",
-        `<li class="list-group-item">Before End item</li>`);
+        `<li class="list-group-item">Before End item</li>`); //lista
      
 
 });
