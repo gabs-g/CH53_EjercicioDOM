@@ -5,6 +5,11 @@ let listas = document.getElementsByTagName("ul");
 let elementos = document.getElementsByClassName("list-group-item");
 let otroElemento = document.querySelector("ul>li");
 let otrosElementos = document.querySelectorAll("ul>li");
+let txtRFC=document.getElementById("txtRFC");
+let txtTelefono=document.getElementById("txtTelefono");
+let txtCURP=document.getElementById("txtCURP");
+
+
 
 let contador = 0;
 
@@ -58,5 +63,24 @@ btnMostrar.addEventListener("click", function(event){
      listas.item(1).insertAdjacentHTML("beforeend",
         `<li class="list-group-item">Before End item</li>`); //lista
      
+});
+//Se ejecuta cuando termina de cargar todos los elementos de la página
+window.addEventListener("load",function(event){
+console.log("Se teminó de cargar la página");
 
+}); //load
+
+function txtToUpper(event){
+    event.preventDefault();
+    event.target.value =event.target.value.trim().toUpperCase();
+
+}// txtToUpper
+
+//blur-> cuando se sale del campo
+txtRFC.addEventListener("blur",txtToUpper); //txtRFC
+txtCURP.addEventListener("blur",txtToUpper); //txtRFC
+
+txtTelefono.addEventListener("blur", function (event){
+    event.preventDefault();
+    txtTelefono.value = txtTelefono.value.trim().slice(0,10);
 });
